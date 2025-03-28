@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background: #3caed1;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Home container starts */
+#home {
+    background: white;
+    color: #1e1e1e;
+}
+
+.home-container {
+    max-width: 900px;
+}
+
+.profile-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.bio{
+    letter-spacing: 1px;
+    color: #5F6F81;
+    font-size: 1rem;
+    min-width: 250px;
+    line-height: 1.4;
+}
+
+.fname-text{
+    color: #000000;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 24px 0;
+}
+
+.lname-text{
+    color: rgb(5, 118, 174);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 24px 0;
+}
+
+/*Home container ends*/
+
+
+#about,
+#skills,
+#projects,
+#contact {
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    text-align: center;
+}
+
+.icons i {
+    font-size: 30px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.icons i:hover {
+    color: #007bff;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
