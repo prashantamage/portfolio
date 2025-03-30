@@ -2,8 +2,8 @@
     --theme-color: #1995AD;
     --theme-bg-color1: #ffffff;
     --theme-bg-color2: #f4f4f4;
-    --primary-font-color:#000000;
-    --secondary-font-color:#ffffff;
+    --primary-font-color: #000000;
+    --secondary-font-color: #ffffff;
     --font-size: 16px;
 }
 
@@ -18,90 +18,105 @@
     font-family: "IBM Plex Mono", monospace;
     font-weight: 100;
     font-style: normal;
-  }
-  
-  .ibm-plex-mono-extralight {
+}
+
+.ibm-plex-mono-extralight {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 200;
     font-style: normal;
-  }
-  
-  .ibm-plex-mono-light {
+}
+
+.ibm-plex-mono-light {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 300;
     font-style: normal;
-  }
-  
-  .ibm-plex-mono-regular {
+}
+
+.ibm-plex-mono-regular {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .ibm-plex-mono-medium {
+}
+
+.ibm-plex-mono-medium {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
     font-style: normal;
-  }
-  
-  .ibm-plex-mono-semibold {
+}
+
+.ibm-plex-mono-semibold {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
     font-style: normal;
-  }
-  
-  .ibm-plex-mono-bold {
+}
+
+.ibm-plex-mono-bold {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
     font-style: normal;
-  }
-  
-  .ibm-plex-mono-thin-italic {
+}
+
+.ibm-plex-mono-thin-italic {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 100;
     font-style: italic;
-  }
-  
-  .ibm-plex-mono-extralight-italic {
+}
+
+.ibm-plex-mono-extralight-italic {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 200;
     font-style: italic;
-  }
-  
-  .ibm-plex-mono-light-italic {
+}
+
+.ibm-plex-mono-light-italic {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 300;
     font-style: italic;
-  }
-  
-  .ibm-plex-mono-regular-italic {
+}
+
+.ibm-plex-mono-regular-italic {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: italic;
-  }
-  
-  .ibm-plex-mono-medium-italic {
+}
+
+.ibm-plex-mono-medium-italic {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
     font-style: italic;
-  }
-  
-  .ibm-plex-mono-semibold-italic {
+}
+
+.ibm-plex-mono-semibold-italic {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
     font-style: italic;
-  }
-  
-  .ibm-plex-mono-bold-italic {
+}
+
+.ibm-plex-mono-bold-italic {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
     font-style: italic;
-  }
-  
+}
+
+
 
 body {
-    font-family: 'IBM Plex Mono','Poppins', sans-serif !important;
+    font-family: 'IBM Plex Mono', 'Poppins', sans-serif !important;
     color: var(--primary-font-color);
+}
+
+button {
+    padding: 9px 20px !important;
+    background-color: var(--theme-color) !important;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px !important;
+    border-radius: 20px !important;
+}
+
+button:hover {
+    background: #0056b3;
 }
 
 nav {
@@ -146,7 +161,7 @@ nav a i {
     font-family: cursive;
 }
 
-.social-block{
+.social-block {
     margin-top: 10px;
     display: flex !important;
 }
@@ -163,13 +178,33 @@ nav a i {
     transition: 0.3s ease-in;
 }
 
+@media screen and (max-width: 768px) {
+    .resume-btn {
+        font-size: 0.8rem;
+        /* Reduce font size */
+        padding: 10px 24px;
+        /* Reduce padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .resume-btn {
+        font-size: 0.75rem;
+        /* Further reduce font size */
+        padding: 8px 20px;
+        /* Adjust padding for smaller screens */
+        border-radius: 30px;
+        /* Slightly smaller border-radius */
+    }
+}
+
 .resume-btn:hover {
     transform: scale(1.01);
-    box-shadow:var(--theme-color) 0px 4px 6px;
+    box-shadow: var(--theme-color) 0px 4px 6px;
 
 }
 
-.social-block{
+.social-block {
     margin-left: 20px;
     display: inline-block;
     float: left;
@@ -181,10 +216,10 @@ nav a i {
     margin-left: 10px;
 }
 
-.social-icons{
+.social-icons {
     margin-left: 15px;
     background-color: white;
-    box-shadow:var(--theme-color) 0px 4px 6px;
+    box-shadow: var(--theme-color) 0px 4px 6px;
     padding: 4px 4px;
     border-radius: 6px;
     border-width: 1px;
@@ -196,7 +231,8 @@ nav a i {
 }
 
 .social-icons:hover {
-    color: #058EB0; /* Different hover color */
+    color: #058EB0;
+    /* Different hover color */
     transform: scale(1.2);
 }
 
@@ -231,15 +267,9 @@ section {
     max-width: 900px;
 }
 
-.bio-text{
+.bio-text {
     font-size: 1.25rem;
     font-weight: 400;
-}
-
-.profile-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
 }
 
 .profile-img {
@@ -247,6 +277,7 @@ section {
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
+    margin-left: 15px;
 }
 
 .profile-img:hover {
@@ -278,6 +309,7 @@ section {
     font-size: 1rem;
     min-width: 250px;
     line-height: 1.4;
+    margin-top: 10px !important;
 }
 
 .fname-text {
@@ -333,7 +365,7 @@ section {
     font-size: 1.25rem;
     font-weight: 400;
 
-    span{
+    span {
         color: #8444df;
     }
 }
@@ -359,17 +391,4 @@ section {
 
 .icons i:hover {
     color: #007bff;
-}
-
-.btn {
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.btn:hover {
-    background: #0056b3;
 }
