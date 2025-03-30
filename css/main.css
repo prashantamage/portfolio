@@ -14,8 +14,93 @@
     scroll-behavior: smooth;
 }
 
+.ibm-plex-mono-thin {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .ibm-plex-mono-extralight {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .ibm-plex-mono-light {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ibm-plex-mono-regular {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ibm-plex-mono-medium {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ibm-plex-mono-semibold {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .ibm-plex-mono-bold {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ibm-plex-mono-thin-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .ibm-plex-mono-extralight-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .ibm-plex-mono-light-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .ibm-plex-mono-regular-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ibm-plex-mono-medium-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .ibm-plex-mono-semibold-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .ibm-plex-mono-bold-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'IBM Plex Mono','Poppins', sans-serif !important;
     color: var(--primary-font-color);
 }
 
@@ -48,6 +133,17 @@ nav a:hover {
 
 nav a i {
     font-size: 16px;
+}
+
+.typewriter {
+    font-size: 30px;
+    font-weight: bold;
+    border-right: 3px solid black;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #23789E;
+    font-family: cursive;
 }
 
 .social-block{
@@ -201,7 +297,49 @@ section {
 /*Home container ends*/
 
 
-#about,
+#about {
+    background: var(--theme-bg-color2);
+}
+
+.about-section {
+    padding: 0px 25px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.about-head {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 83px;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.about-head-text {
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+}
+
+.section-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px 20px;
+    font-size: 1.25rem;
+    font-weight: 400;
+
+    span{
+        color: #8444df;
+    }
+}
+
+
+
 #skills,
 #projects,
 #contact {
