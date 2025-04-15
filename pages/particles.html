@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --theme-color: #00ffff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+      cursor: none;
+    }
+
+    #tsparticles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .custom-cursor {
+      width: 30px;
+      height: 30px;
+      background-color: var(--theme-color);
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.08s ease-out;
+      box-shadow: 0 0 10px var(--theme-color), 0 0 20px var(--theme-color);
+      animation: pulseSquare 1.2s infinite ease-in-out;
+    }
+
+    @keyframes pulseSquare {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .container {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: var(--theme-color);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      color: #ffffffcc;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.3rem 0.6rem;
+      background: var(--theme-color);
+      color: #000;
+      border-radius: 6px;
+      margin: 0.3rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Spiderweb background -->
+  <div id="tsparticles"></div>
+
+  <!-- Custom cursor -->
+  <div class="custom-cursor"></div>
+
+  <!-- Portfolio Content -->
+  <div class="container">
+    <h1>Hi, I'm Your Name 👋</h1>
+    <p>A passionate developer building cool things with code.</p>
+
+    <h2>🛠️ Skills</h2>
+    <div>
+      <strong>Languages:</strong>
+      <div class="tag">JavaScript</div>
+      <div class="tag">HTML</div>
+      <div class="tag">CSS</div>
+      <div class="tag">Java</div>
+      <div class="tag">SQL</div>
+    </div>
+    <div>
+      <strong>Frameworks & Tools:</strong>
+      <div class="tag">Angular</div>
+      <div class="tag">Node.js</div>
+      <div class="tag">Git</div>
+      <div class="tag">Postman</div>
+      <div class="tag">Bootstrap</div>
+    </div>
+
+    <h2>🌐 Languages</h2>
+    <ul>
+      <li>English – Professional</li>
+      <li>Hindi – Native</li>
+      <li>Marathi – Fluent</li>
+    </ul>
+  </div>
+
+  <!-- tsParticles CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+  <!-- tsParticles Setup -->
+  <script>
+    tsParticles.load("tsparticles", {
+      background: {
+        color: "#0d0d0d"
+      },
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onHover: {
+            enable: true,
+            mode: "repulse"
+          },
+          resize: true
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 0.4
+          }
+        }
+      },
+      particles: {
+        color: { value: "#ffffff" },
+        links: {
+          color: "#ffffff",
+          distance: 120,
+          enable: true,
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          outModes: "bounce"
+        },
+        number: {
+          value: 60,
+          density: { enable: true, area: 800 }
+        },
+        opacity: { value: 0.5 },
+        shape: { type: "circle" },
+        size: { value: { min: 1, max: 3 } }
+      },
+      detectRetina: true
+    });
+  </script>
+
+  <!-- Cursor follow script -->
+  <script>
+    const cursor = document.querySelector('.custom-cursor');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.top = `${e.clientY}px`;
+      cursor.style.left = `${e.clientX}px`;
+    });
+  </script>
+</body>
+</html>

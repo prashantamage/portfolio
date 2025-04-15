@@ -5,7 +5,8 @@ require.config({
         bootstrap: "bootstrap.bundle.min",
         aos: "aos",
         gsap: "gsap.min",
-        fontawesome: "font-awesome-all.min"
+        fontawesome: "font-awesome-all.min",
+        particles:"tsparticles.bundle.min"
     },
     shim: {
         bootstrap: {
@@ -20,7 +21,7 @@ require.config({
     }
 });
 
-require(["jquery", "bootstrap", "aos", "gsap", "fontawesome"], function ($, bootstrap, AOS, gsapModule) {
+require(["jquery", "bootstrap", "aos", "gsap","particles", "fontawesome"], function ($, bootstrap, AOS, gsapModule,tsParticles) {
     console.log("All dependencies loaded");
 
     var gsap = gsapModule.gsap || gsapModule;
@@ -51,5 +52,56 @@ require(["jquery", "bootstrap", "aos", "gsap", "fontawesome"], function ($, boot
         stagger: 0.2
     });
 
-    console.log("Animations initialized");
+    gsap.from("skills-list", {
+        opacity: 0,
+        x: -50,
+        duration: 0.8,
+        stagger: 0.2
+    });
+
+    // tsParticles.tsParticles.load("tsparticles", {
+    //     background: {
+    //       //color: "#0d0d0d"
+    //     },
+    //     fpsLimit: 60,
+    //     interactivity: {
+    //       events: {
+    //         onHover: {
+    //           enable: false,
+    //           mode: "repulse"
+    //         },
+    //         resize: false
+    //       },
+    //       modes: {
+    //         repulse: {
+    //           distance: 50,
+    //           duration: 0.4
+    //         }
+    //       }
+    //     },
+    //     particles: {
+    //       color: { value: "#000000" },
+    //       links: {
+    //         color: "#000000",
+    //         distance: 120,
+    //         enable: true,
+    //         opacity: 0.4,
+    //         width: 1
+    //       },
+    //       move: {
+    //         enable: true,
+    //         speed: 1,
+    //         direction: "none",
+    //         outModes: "bounce"
+    //       },
+    //       number: {
+    //         value: 80,
+    //         density: { enable: true, area: 800 }
+    //       },
+    //       opacity: { value: 0.5 },
+    //       shape: { type: "circle" },
+    //       size: { value: { min: 1, max: 5 } }
+    //     },
+    //     detectRetina: true
+    //   });
 });

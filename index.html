@@ -21,18 +21,21 @@
 </head>
 
 <body>
+    <div class="custom-cursor"></div>
+
     <header>
         <nav>
             <a href="#home"><i class="fas fa-home"></i> Home</a>
             <a href="#about"><i class="fas fa-user"></i> About</a>
             <a href="#skills"><i class="fas fa-code"></i> Skills</a>
-            <a href="#projects"><i class="fas fa-briefcase"></i> Projects</a>
+            <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
             <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
         </nav>
     </header>
 
     <section id="home">
-        <div class="home-container text-center my-5">
+        <!-- <div id="particles-container"></div> -->
+        <div class="home-container my-5">
             <div class="row justify-content-center align-items-center">
                 <!-- Image Column -->
                 <div class="col-md-6">
@@ -42,7 +45,7 @@
                 <div class="col-md-6 bio">
                     <div>
                         <P class="hi-text">
-                            Hi There! I'M
+                            Hi There! 👋 , I'M
                         </P>
                     </div>
                     <div>
@@ -87,6 +90,9 @@
         </div>
 
         <article class="about-section-container">
+            <div class="short-head">
+                <h2>Summary</h2>
+            </div>
             <span>👨‍💻 Full-Stack Developer | 9+ Years of Experience in IT & Web Development 🌍✨</span>
             💡 A dedicated professional with a strong work ethic, excelling both independently and in team environments
             🤝.
@@ -99,8 +105,33 @@
             ⌛📚 Beyond coding, I love exploring new places ✈️🚂🚙, diving into
             Movies & TV Series 📺, and unwinding with some gaming fun 🎮.</p>
             <br>
-
+            <div class="short-head">
+                <h2>Hobbies</h2>
+            </div>
+            <div class="hobbies-section mt-2">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="hobbies-icon">🏏</div>
+                        <div class="hobbies-text">Cricket</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hobbies-icon">🥾</div>
+                        <div class="hobbies-text">Hiking</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hobbies-icon">🏊‍♀️</div>
+                        <div class="hobbies-text">Swimming</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="hobbies-icon">📸</div>
+                        <div class="hobbies-text">Photography</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
         </article>
+
     </section>
 
     <section class="skill-section" id="skills">
@@ -109,69 +140,64 @@
         </div>
 
         <div class="skill-section-container">
-            <ul class="skills-grid">
-                <li>
+            <div class="short-head">
+                <h2>Technologies I Have Used</h2>
+            </div>
+            <ul id="skills-list" class="skills-grid">
+                <script>
+                    const skills = ["HTML", "CSS", "Java", "Node JS", "Angular", "Knockout", "OJET", "Bootstrap",
+                        "Oracle DB", "Cordova", "Rest Api", "Github", "Javascript", "JQuery", "SASS"
+                    ];
+                    const ul = document.getElementById("skills-list");
+                    skills.forEach(skill => {
+                        const li = document.createElement("li");
+                        li.innerHTML = `
                   <div>
-                    <img src="assets/images/skills/html.png">
-                    <p class="skill-name">HTML</p>
+                    <img src="assets/images/skills/${skill}.png" alt="${skill}">
+                    <p class="skill-name">${skill}</p>
                   </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="assets/images/skills/css.png">
-                    <p class="skill-name">CSS</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="assets/images/skills/sass.png">
-                    <p class="skill-name">SASS</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="assets/images/skills/java-script.png">
-                    <p class="skill-name">Javascript</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="assets/images/skills/jquery.png">
-                    <p class="skill-name">JQuery</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="assets/images/skills/react.png">
-                    <p class="skill-name">React</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="assets/images/skills/api.png">
-                    <p class="skill-name">REST API</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="assets/images/skills/git.png">
-                    <p class="skill-name">Git</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="assets/images/skills/firebase.png">
-                    <p class="skill-name">Firebase</p>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <img src="assets/images/skills/vscode.png">
-                    <p class="skill-name">VS Code</p>
-                  </div>
-                </li>
-              </ul>
+                `;
+                        ul.appendChild(li);
+                    });
+                </script>
+            </ul>
+        </div>
+    </section>
 
+    <section id="experience" class="experience-section">
+        <div class="experience-head">
+            <h2>Experience</h2>
+        </div>
+        <div class="experience-section-container">
+            <div class="short-head">
+                <h2>Timeline</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Oracle Financial Services Software</h3>
+                        <p>I am currently working as Sr. Developer for Experis...</p>
+                    </div>
+                    <div class="timeline-icon">APR 2016</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Barclays</h3>
+                        <p>Worked in the Global Finance Technology solutions Team in Barclays.</p>
+                    </div>
+                    <div class="timeline-icon">AUG 2018</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Newgen</h3>
+                        <p>Started my journey from Newgen working for Services and product teams.</p>
+                    </div>
+                    <div class="timeline-icon">DEC 2018</div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -195,6 +221,15 @@
         </div>
     </section>
     <script data-main="js/main" src="js/require.min.js"></script>
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.top = `${e.clientY}px`;
+            cursor.style.left = `${e.clientX}px`;
+        });
+    </script>
+
     <script>
         const sentences = [
             "Fullstack Developer",
@@ -237,7 +272,6 @@
 
         typeEffect();
     </script>
-
 </body>
 
 </html>
