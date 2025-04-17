@@ -145,16 +145,74 @@
             </div>
             <ul id="skills-list" class="skills-grid">
                 <script>
-                    const skills = ["HTML", "CSS", "Java", "Node JS", "Angular", "Knockout", "OJET", "Bootstrap",
-                        "Oracle DB", "Cordova", "Rest Api", "Github", "Javascript", "JQuery", "SASS"
+                    const skills = [{
+                            label: "HTML",
+                            value: "HTML"
+                        },
+                        {
+                            label: "CSS",
+                            value: "CSS"
+                        },
+                        {
+                            label: "Java",
+                            value: "Java"
+                        },
+                        {
+                            label: "Node JS",
+                            value: "Node_JS"
+                        },
+                        {
+                            label: "Angular",
+                            value: "Angular"
+                        },
+                        {
+                            label: "Knockout",
+                            value: "Knockout"
+                        },
+                        {
+                            label: "OJET",
+                            value: "OJET"
+                        },
+                        {
+                            label: "Bootstrap",
+                            value: "Bootstrap"
+                        },
+                        {
+                            label: "Oracle DB",
+                            value: "Oracle_DB"
+                        },
+                        {
+                            label: "Cordova",
+                            value: "Cordova"
+                        },
+                        {
+                            label: "Rest Api",
+                            value: "Rest_Api"
+                        },
+                        {
+                            label: "Github",
+                            value: "Github"
+                        },
+                        {
+                            label: "Javascript",
+                            value: "Javascript"
+                        },
+                        {
+                            label: "JQuery",
+                            value: "JQuery"
+                        },
+                        {
+                            label: "SASS",
+                            value: "SASS"
+                        }
                     ];
                     const ul = document.getElementById("skills-list");
                     skills.forEach(skill => {
                         const li = document.createElement("li");
                         li.innerHTML = `
                   <div>
-                    <img src="assets/images/skills/${skill}.png" alt="${skill}">
-                    <p class="skill-name">${skill}</p>
+                    <img src="assets/images/skills/${skill.value}.png" alt="${skill}">
+                    <p class="skill-name">${skill.label}</p>
                   </div>
                 `;
                         ul.appendChild(li);
