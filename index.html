@@ -24,22 +24,52 @@
     <div class="custom-cursor"></div>
 
     <header>
-        <nav>
-            <a href="#home"><i class="fas fa-home"></i> Home</a>
-            <a href="#about"><i class="fas fa-user"></i> About</a>
-            <a href="#skills"><i class="fas fa-code"></i> Skills</a>
-            <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
-            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        <nav class="navbar navbar-expand-lg fixed-top" style="background: var(--theme-color);">
+            <div class="container-fluid">
+
+                <a class="navbar-brand text-white" href="#home">
+                    <i class="fas fa-home"></i> Prashant
+                </a>
+
+                <!-- Toggle for small screens -->
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#portfolioNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Links (Horizontal on large screens) -->
+                <div class="collapse navbar-collapse justify-content-end" id="portfolioNav">
+                    <ul class="navbar-nav d-flex align-items-center gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#home"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#about"><i class="fas fa-user"></i> About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#skills"><i class="fas fa-code"></i> Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#experience"><i class="fas fa-briefcase"></i>
+                                Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <section id="home">
+
+    <section id="home" data-aos="fade-up">
         <!-- <div id="particles-container"></div> -->
         <div class="home-container my-5">
             <div class="row justify-content-center align-items-center">
                 <!-- Image Column -->
                 <div class="col-md-6">
-                    <img src="assets/images/prashant5.png" class="profile-img" alt="Your Image">
+                    <!-- <img src="assets/images/prashant5.png" class="profile-img" alt="Prashant Amage"> -->
                 </div>
                 <!-- Text Column -->
                 <div class="col-md-6 bio">
@@ -84,7 +114,7 @@
         </div>
     </section>
 
-    <section class="about-section" id="about">
+    <section class="about-section" id="about" data-aos="fade-right">
         <div class="about-head">
             <h2>ABOUT ME</h2>
         </div>
@@ -134,7 +164,7 @@
 
     </section>
 
-    <section class="skill-section" id="skills">
+    <section class="skill-section" id="skills" data-aos="fade-left">
         <div class="skill-head">
             <h2>SKILLS</h2>
         </div>
@@ -146,16 +176,15 @@
             <ul id="skills-list" class="skills-grid">
                 <script>
                     const skills = [{
+                            label: "Java",
+                            value: "Java"
+                        }, {
                             label: "HTML",
                             value: "HTML"
                         },
                         {
                             label: "CSS",
                             value: "CSS"
-                        },
-                        {
-                            label: "Java",
-                            value: "Java"
                         },
                         {
                             label: "Node JS",
@@ -222,7 +251,7 @@
         </div>
     </section>
 
-    <section id="experience" class="experience-section">
+    <section id="experience" class="experience-section" data-aos="fade-right">
         <div class="experience-head">
             <h2>Experience</h2>
         </div>
@@ -230,43 +259,90 @@
             <div class="short-head">
                 <h2>Timeline</h2>
             </div>
-            <div class="timeline">
+            
+            <div class="left-line-timeline">
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Oracle Financial Services Software</h3>
-                        <p>Started my journey from OFSS.</p>
+                    <div class="timeline-marker">
+                        <img src="assets/images/company-logos/oracle.png" alt="Oracle" class="timeline-avatar">
                     </div>
-                    <div class="timeline-icon">APR 2016</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-building"></i> Oracle Financial Services Software</h3>
+                        <p class="timeline-years">Dec 2018 - Present</p>
+                        <ul class="timeline-details">
+                            <li>Implemented OBDX on multiple virtual machines and managed configurations and setups for OBDX implementation.</li>
+                            <li>Delivered product walkthroughs to clients.</li>
+                            <li>Resolved performance, availability, and functionality issues across environments.</li>
+                            <li>Coordinated with clients on change requests and customizations anddelivered.</li>
+                        </ul>
+                    </div>
                 </div>
-
+            
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Terafina</h3>
-                        <p>Worked on salesforce</p>
+                    <div class="timeline-marker">
+                        <img src="assets/images/company-logos/terafina.png" alt="Terafina" class="timeline-avatar">
                     </div>
-                    <div class="timeline-icon">AUG 2018</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-building"></i> Terafina</h3>
+                        <p class="timeline-years">Aug 2018 - Dec 2018</p>
+                        <ul class="timeline-details">
+                            <li>Implemented origination changes for Loans, Savings Accounts and CreditCards.</li>
+                            <li>Developed custom settings and branding changes for banks.</li>
+                        </ul>
+                    </div>
                 </div>
-
+            
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Oracle Financial Services Software</h3>
-                        <p>I am currently working as Sr. Developer for Experis...</p>
+                    <div class="timeline-marker">
+                        <img src="assets/images/company-logos/oracle.png" alt="Experis" class="timeline-avatar">
                     </div>
-                    <div class="timeline-icon">DEC 2018</div>
-                </div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-building"></i> Oracle Financial Services Software</h3>
+                        <p class="timeline-years">Apr 2016 - Aug 2018</p>
+                        <ul class="timeline-details">
+                            <li>Developed new features in product as per customer's rquirements.</li>
+                            <li>Configured and set up implementation environments, including OBDX onvirtual machines and Docker.</li>
+                            <li>Resolved performance, availability, and functionality issues across various environments.</li>
+                            <li>Delivered branding updates, application upgrades, and hybrid appdevelopment .</li>
+                            <li>Enhanced products based on client requirements and supported offshoredeployments.</li>
 
+                        </ul>
+                    </div>
+                </div>
+            
             </div>
+            
+            
+            
+
+
+
         </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
+    <section id="projects" class="projects-section" data-aos="fade-left">
+        <div class="experience-head">
             <h2>Projects</h2>
-            <p>Here are some of my key projects. More details coming soon.</p>
         </div>
+        <div class="experience-section-container">
+            <div class="short-head">
+                <h2>Sites</h2>
+            </div>
+            <div class="project-card">
+                <img src="assets/images/projects/sww.png" alt="Project Image" class="project-img">
+                <div class="project-details">
+                    <h3 class="project-title">Siddhivinayak Winding Works
+                    </h3>
+                    <p class="project-description">A modern, responsive website showcasing the services of Siddhivinayak Winding Works, specializing in electric motor repairs, rewinding, and servicing for well-known brands like Crompton, Siemens etc.</p>
+                    <div class="project-tech">
+                    </div>
+                    <a href="http://siddhivinayakwindingworks.com/" target="_blank" class="view-btn">View Project</a>
+                </div>
+            </div>
+            <p>Here are some of my key projects. More details coming soon.</p>
+        </div>       
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <div class="container">
             <h2>Contact Me</h2>
             <p>Email: amageprashant@gmail.com</p>
@@ -278,6 +354,9 @@
             </div>
         </div>
     </section>
+    <footer class="text-center py-3" style="background: var(--theme-color); color:white;">
+        &copy; 2025 Prashant Amage. All Rights Reserved.
+    </footer>
     <script data-main="js/main" src="js/require.min.js"></script>
     <script>
         const cursor = document.querySelector('.custom-cursor');
@@ -329,6 +408,27 @@
         }
 
         typeEffect();
+
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+
+        });
     </script>
 </body>
 
